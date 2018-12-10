@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification d'un article{% endblock %}
+
+{% form_theme form '/partials/collectionImages.html.twig  ' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Modification de l'article : {{ ad.title }}</h1>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="hidden" id="widget-counter" value="0">
+        <button href="{{ path('ads_new') }}" class="btn btn-primary">Enregistrer les modifications</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/js/app.js"></script>
+{% endblock %}

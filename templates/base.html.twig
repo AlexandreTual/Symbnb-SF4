@@ -9,6 +9,15 @@
 </head>
 <body>
 {% include '/partials/header.html.twig' %}
+{% for key, messages in app.flashes() %}
+    <div class="container">
+        <div class="alert alert-{{ key }}" role="alert">
+            {% for message in messages %}
+                <p>{{ message|raw }}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}
 {% block body %}{% endblock %}
 {% include '/partials/footer.html.twig' %}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

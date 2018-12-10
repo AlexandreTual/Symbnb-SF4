@@ -17,10 +17,10 @@
         <div class="row">
             <div class="col-md-8 text-justify">
                 {{ ad.content|raw }}
-                <div id="adcarousel" class="carousel slide" data-ride="carousel">
+                <div id="adCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         {% for image in ad.images %}
-                            <li data-target="#carouselExampleIndicators"
+                            <li data-target="#adCarousel"
                                 data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}></li>
                         {% endfor %}
                     </ol>
@@ -35,11 +35,11 @@
                             </div>
                         {% endfor %}
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#adCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#adCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>

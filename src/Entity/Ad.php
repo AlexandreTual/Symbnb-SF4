@@ -12,7 +12,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AdRepository")
  * @ORM\HasLifecycleCallbacks
- * @UniqueEntity("title")
+ * @UniqueEntity("title",
+ *     message = "Une annonce possède déjà ce titre veuillez le modifier !")
  */
 class Ad
 {

@@ -28,8 +28,7 @@ class Image
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(
      *     min = 10,
-     *     minMessage = "La légende de l'image doit contenir au moin 10 caractères.")
-     *
+     *     minMessage = "La légende de l'image doit contenir au moins 10 caractères.")
      */
     private $caption;
 
